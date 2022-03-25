@@ -3,46 +3,6 @@
   padding: 0;
 }
 
-/*body::after {
-  content: "";
-  display: block;
-  width: 1660px;
-  height: 3500px;
-  background-image: url(../NOEMI_mq_desktop.jpg);
-  position: absolute;
-  top: 0;
-  left: calc(50% - 830px);
-  opacity: 0.6;
-  z-index: 999;
-}*/
-
-
-/*body::after {
-  content: "";
-  display: block;
-  width: 360px;
-  height: 7465px;
-  background-image: url(../NOEMI_mq_mobile.jpg);
-  position: absolute;
-  top: 0;
-  opacity: 0.6;
-  z-index: 999;
-  left: calc(50% - 180px);
-}
-*/
-
-/*body::after {
-  content: "";
-  display: block;
-  width: 768px;
-  height: 5230px;
-  background-image: url(../NOEMI_mq_tablet.jpg);
-  position: absolute;
-  top: 0;
-  opacity: 0.6;
-  z-index: 999;
-  left: calc(50% - 384px);
-}*/
 
 @font-face {
   font-family: "OpenSans-Regular";
@@ -59,20 +19,20 @@
 }
 
 /*header*/
-@media (min-width: 360px) and (max-width: 768px) {
-   .header {
+@media (min-width: 320px) and (max-width: 640px) {
+.header {
   width: 100%;
-  min-width: 360px;
+  min-width: 320px;
   height: 100%;
   background-image: url(../images/banner-mobile.jpg);
   padding-bottom: 110px;
 }
 
 .container {
-flex-direction: column-reverse;
-padding-top: 30px;
-justify-content: space-between;
-max-width: 360px;
+  flex-direction: column-reverse;
+  padding-top: 30px;
+  justify-content: space-between;
+  max-width: 320px;
 }
 
 .header-logo {
@@ -143,7 +103,7 @@ max-width: 360px;
 
 }
 
-@media (min-width: 768px) and (max-width: 1200px)  {
+@media (min-width: 641px) and (max-width: 1200px)  {
   .header {
   width: 100%;
   background-image: url(../images/banner-bg-tablet.jpg);
@@ -151,14 +111,14 @@ max-width: 360px;
 }
 
 .container {
-padding-top: 40px;
-padding-left: 35px;
-justify-content: space-between;
-max-width: 768px;
+  padding-top: 40px;
+  padding-left: 35px;
+  justify-content: space-between;
+  max-width: 641px;
  }
 
 .menu-list {
-display: none;
+  display: none;
 }
 
 .header-logo {
@@ -310,8 +270,8 @@ display: none;
 /*----trends---*/
 
 
-@media (min-width: 360px) and (max-width: 768px) {
-  @media (orientation: landscape) {
+@media (min-width: 320px) and (max-width: 640px) {
+@media (orientation: landscape) {
 .trends-content {
   width: 49.7%;
  }
@@ -373,19 +333,19 @@ display: none;
 }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
- @media (orientation: landscape) {
- .trends-content {
+@media (min-width: 641px) and (max-width: 1200px) {
+@media (orientation: landscape) {
+.trends-content {
   width: 24.7%;
  }
 
- .trends-content:nth-child(n + 2) {
+.trends-content:nth-child(n + 2) {
   margin-left: 3px;
 }
 }
 
 @media (orientation: portrait) {
-  .trends-content {
+.trends-content {
   width: 49.7%;
 }
 
@@ -409,7 +369,7 @@ display: none;
 
 .trends-item {
   padding-left: 20px;
-  margin: 50px auto 10px;
+  margin: 50px auto 20px;
 }
 
 .trends-block {
@@ -645,16 +605,18 @@ display: none;
 }
 
 /*---main---*/
-@media (min-width: 360px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 640px) {
 .block {
   display: flex;
   flex-direction: column;
   margin: 45px auto auto;
-  min-width: 360px;
+  min-width: 290px;
+  width: 91%;
 }
 
 .main {
-  max-width: 330px;
+  min-width: 290px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -662,7 +624,7 @@ display: none;
 .news {
   display: flex;
   flex-wrap: wrap;
-  min-width: 330px;
+  min-width: 290px;
 }
 
 .news:after {
@@ -670,9 +632,14 @@ display: none;
   display: block;
   position: relative;
   margin-top: 20px;
-  min-width: 330px;
-  height: 5px;
+  min-width: 290px;
+  width: 100%;
+  height: 3px;
   background: #f4f7f6;
+}
+
+.news:last-child:after {
+  display: none;
 }
 
 .news {
@@ -681,15 +648,18 @@ display: none;
  
 .news-preview {
   display: block;
+  width: 100%;
  }
 
 .news-img {
-  width: 330px;
+  min-width: 290px;
+  width: 100%;
 }
 
 .news-info {
   display: block;
-  width: 330px;
+  min-width: 290px;
+width: 100%;
   padding-top: 8px;
 }
 
@@ -706,22 +676,22 @@ display: none;
 }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 641px) and (max-width: 1200px) {
 .block {
   display: flex;
   justify-content: center;
-  margin: 55px 35px auto;
-  min-width: 768px;
+  margin: 55px 30px auto;
+  min-width: 581px;
 }
 
 .main {
-  min-width: 390px;
+  min-width: 260px;
 }
 
 .news {
   display: flex;
   flex-wrap: wrap;
-  min-width: 390px;
+  min-width: 260px;
 }
 
 .news:after {
@@ -730,8 +700,12 @@ display: none;
   position: relative;
   margin-top: 20px;
   min-width: 100%;
-  height: 5px;
+  height: 3px;
   background: #f4f7f6;
+}
+
+.news:last-child:after {
+  display: none;
 }
 
 .news {
@@ -741,18 +715,18 @@ display: none;
 .news-preview {
   display: block;
   width: 100%;
-   min-width: 390px;
+  min-width: 260px;
  }
 
 .news-img {
-  min-width: 390px;
+  min-width: 260px;
   width: 100%;
   display: block;
 }
 
 .news-info {
   display: block;
-  min-width: 390px;
+  min-width: 260px;
   padding-top: 8px;
 }
 
@@ -884,11 +858,13 @@ h2 {
 }
 
 /*---aside---*/
-@media (min-width: 360px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 640px) {
 .aside {
-  max-width: 330px;
+  min-width: 330px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
 }
 
 .title-posts {
@@ -898,19 +874,24 @@ h2 {
 
 .object-post {
   box-sizing: border-box;
-  width: 230px;
+  min-width: 230px;
+  width: 100%;
+  justify-content: center;
 }
 
 .field {
-  width: 280px;
+  min-width: 280px;
+  width: 100%;
 }
 
 .field-email {  
-  width: 330px;  
+  min-width: 330px;  
+  width: 100%;
 }
 
 .button-submit {  
-  width: 330px;
+  min-width: 330px;
+  width: 100%;
 }
 
 .tags-link {  
@@ -918,7 +899,7 @@ h2 {
 }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 641px) and (max-width: 1200px) {
 .aside {
   max-width: 270px;
   margin-left: 35px;
@@ -1080,7 +1061,6 @@ h2 {
 .field-email {
   box-sizing: border-box;
   margin-top: 20px;
-  
   height: 48px;
   border: 1px solid #f4f7f6;
   margin-bottom: 20px;
@@ -1114,7 +1094,7 @@ h2 {
   font-size: 12px;
   color: #000000;
   font-family: OpenSans-Bold, Arial, sans-serif;
-  padding: 5px 15px;
+  padding: 5px 13px;
 }
 
 .tags-list-name {
@@ -1166,9 +1146,10 @@ h2 {
 }
 
 /*----section products----*/
-@media (min-width: 360px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 640px) {
 .products-block {
-  max-width: 330px;
+  min-width: 290px;
+  width: 91%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1187,8 +1168,8 @@ h2 {
 
 .product-img {
   width: 100%;
-  margin-left: 6%;
-  margin-right: 6%;  
+  margin-left: 20px;
+  margin-right: 20px;  
  }
 
 .product-image {
@@ -1202,8 +1183,6 @@ h2 {
   margin: -30px 0 0 0;
 }
 
-
-
 .products-item {
   font-size: 16px;
 }
@@ -1213,55 +1192,45 @@ h2 {
 }
 }
 
-
-@media (min-width: 768px) and (max-width: 1200px) {
- .products {
+@media (min-width: 641px) and (max-width: 1200px) {
+.products {
   margin-left: 35px;
   margin-right: 35px;
+
  }
 
- .products-block {
+.products-block {
   display: flex;
   flex-wrap: wrap;
- justify-content: space-between;  
+  box-sizing: border-box;
+  justify-content: space-between;
 }
 
 .product {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 49.1%;
-  align-items: flex-end;
-  padding-top: 20px;
+  flex-direction: column;
+  max-width: 48.5%;
+  padding-top: 35px;
   flex-grow: 1;
 }
 
-.product:nth-child(2) {
-  margin-left: 1.6%;
-}
-
-.product:nth-child(3) {
-  flex-grow: 0;
-}
-
 .product-img {
-  width: 100%;
-  margin-left: 6%;
-  margin-right: 6%;  
+  width: 100%;   
 }
 
 .product-image {
-  width: 100%;
+  width: 86%;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product-body {
+  min-height: 190px;
+  height: 100%;
   padding: 45px 20px 15px;
   border: 3px solid #b59f5b;
   margin: -35px 0 0 0;
-}
-
-.product-body:nth-child(3) {
-  padding: 45px 20px 0px; 
 }
 
 .products-item {
@@ -1293,12 +1262,24 @@ h2 {
 }
 
 .product-img {
-  width: 100%;
-  margin-left: 6%;
-  margin-right: 6%;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
+.product-image {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.product-body {
+  min-height: 190px;
+  height: 100%;
+  padding: 45px 20px 25px;
+  border: 3px solid #b59f5b;
+  margin: -35px 0 0 0;
+}
 
 .products-item {
    font-size: 20px;
@@ -1307,13 +1288,6 @@ h2 {
 .product-title {
   font-size: 20px;
 }
-}
-
-.product-body {
-  min-height: 190px;
-  padding: 45px 20px 25px;
-  border: 3px solid #b59f5b;
-  margin: -35px 0 0 0;
 }
 
 .product-title {
@@ -1405,10 +1379,10 @@ div.product-price2 {
 }
 
 /*---footer---*/
-@media (min-width: 360px) and (max-width: 768px){
+@media (min-width: 320px) and (max-width: 640px){
 .footer-wrap {
   margin: auto;
-  max-width: 330px;
+  width: 90%;
 }
 
 .footer-address {
@@ -1416,10 +1390,10 @@ div.product-price2 {
 }
 }
 
-@media (min-width: 768px) and (max-width: 1200px){
+@media (min-width: 641px) and (max-width: 1200px){
 .footer-wrap {
   margin: auto;
-  max-width: 768px;
+  width: 93%;
 }
 
 .footer-address {
@@ -1430,7 +1404,7 @@ div.product-price2 {
 @media (min-width: 1200px) {
 .footer-wrap {
   margin: auto;
-  max-width: 1200px;
+  width: 1200px;
 }
 
 .footer-address {
@@ -1485,11 +1459,12 @@ div.product-price2 {
   font-family: OpenSans-Bold, Arial, sans-serif;
   font-size: 12px;
   text-align: center;
-  
 }
+
 .copyright {
   margin-bottom: 45px;
 }
+
 .socials-link-text {
   position: absolute;
   width: 1px;
@@ -1502,7 +1477,7 @@ div.product-price2 {
   display: none;
 }
 
-@media (min-width: 360px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 640px) {
 .popap-bg {
   padding-top: 15px;
   padding-right: 15px;
@@ -1529,7 +1504,7 @@ div.product-price2 {
   width: 25px;
   height: 25px;
   background-size: 25px;
-  }
+}
 
 .radio-group:nth-of-type(n + 2) {
   margin-left: 30px;
@@ -1557,7 +1532,7 @@ div.product-price2 {
 
 .popap-button {
   padding: 15px 100px;
-  }
+}
 
 .popup__close {
   background-size: 25px;
@@ -1568,7 +1543,7 @@ div.product-price2 {
 }
 
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 641px) and (max-width: 1200px) {
 .popap-bg {
   padding-top: 230px;
   padding-right: 40px;
@@ -1778,7 +1753,6 @@ div.product-price2 {
   background-image: url(../svg/form-empty-circle.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  
 }
 
 .radio-group-text::before {
@@ -1808,7 +1782,7 @@ div.product-price2 {
 
 .popap-field {
   box-sizing: border-box;
-   padding: 10px 20px;
+  padding: 10px 20px;
   margin-bottom: 30px;
   border: 1px solid #f4f7f6;
   background-color: #f4f7f6;
