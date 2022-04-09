@@ -860,7 +860,7 @@ h2 {
 /*---aside---*/
 @media (min-width: 320px) and (max-width: 640px) {
 .aside {
-  min-width: 330px;
+  min-width: 290px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -874,23 +874,21 @@ h2 {
 
 .object-post {
   box-sizing: border-box;
-  min-width: 230px;
   width: 100%;
   justify-content: center;
 }
 
 .field {
-  min-width: 280px;
   width: 100%;
 }
 
 .field-email {  
-  min-width: 330px;  
+  min-width: 290px;  
   width: 100%;
 }
 
 .button-submit {  
-  min-width: 330px;
+  min-width: 290px;
   width: 100%;
 }
 
@@ -1767,6 +1765,7 @@ div.product-price2 {
 .radio-group {
   display: inline-block;
   font-size: 13px;
+  font-family: OpenSans-Regular, Arial, sans-serif;
  }
 
 .radio:checked ~ .radio-group-text::before {
